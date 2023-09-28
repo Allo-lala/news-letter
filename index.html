@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Website</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <footer>
+        <h3>Subscribe to Our Newsletter</h3>
+        <form id="newsletter-form" action="subscribe.php" method="POST">
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </footer>
+
+    <!-- Optional: Add JavaScript to handle form submission -->
+    <script>
+        document.getElementById("newsletter-form").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent the form from submitting
+            const email = document.getElementById("email").value;
+            
+            // You can now send the email address to your backend or a newsletter service.
+            // Here, we'll just log it to the console.
+            console.log("Subscribed email: " + email);
+            
+            // Optionally, you can display a thank you message or redirect the user.
+            // For example: alert("Thank you for subscribing!");
+        });
+    </script>
+</body>
+</html>
